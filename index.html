@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamster Tiny House Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐹 Hamster Tiny House Builder</h1>
+            <p>Design the perfect tiny house for your furry friend!</p>
+        </header>
+
+        <div class="builder-layout">
+            <div class="controls-panel">
+                <h2>House Layers</h2>
+                
+                <div class="layer-section">
+                    <h3>Base & Foundation</h3>
+                    <div class="option-group" data-layer="base">
+                        <label><input type="radio" name="base" value="grass" checked> Grass Base</label>
+                        <label><input type="radio" name="base" value="dirt"> Dirt Base</label>
+                        <label><input type="radio" name="base" value="sand"> Sand Base</label>
+                        <label><input type="radio" name="base" value="stone"> Stone Base</label>
+                    </div>
+                </div>
+
+                <div class="layer-section">
+                    <h3>Flooring</h3>
+                    <div class="option-group" data-layer="flooring">
+                        <label><input type="radio" name="flooring" value="wood" checked> Wood Planks</label>
+                        <label><input type="radio" name="flooring" value="bamboo"> Bamboo</label>
+                        <label><input type="radio" name="flooring" value="paper"> Paper Bedding</label>
+                        <label><input type="radio" name="flooring" value="fleece"> Fleece</label>
+                    </div>
+                </div>
+
+                <div class="layer-section">
+                    <h3>Interior Walls</h3>
+                    <div class="option-group" data-layer="interior-walls">
+                        <label><input type="radio" name="interior-walls" value="natural-wood" checked> Natural Wood</label>
+                        <label><input type="radio" name="interior-walls" value="painted-white"> Painted White</label>
+                        <label><input type="radio" name="interior-walls" value="painted-blue"> Painted Blue</label>
+                        <label><input type="radio" name="interior-walls" value="cardboard"> Cardboard</label>
+                    </div>
+                </div>
+
+                <div class="layer-section">
+                    <h3>Exterior Walls</h3>
+                    <div class="option-group" data-layer="exterior-walls">
+                        <label><input type="radio" name="exterior-walls" value="log-cabin" checked> Log Cabin</label>
+                        <label><input type="radio" name="exterior-walls" value="brick"> Brick</label>
+                        <label><input type="radio" name="exterior-walls" value="siding"> Wood Siding</label>
+                        <label><input type="radio" name="exterior-walls" value="stone"> Stone</label>
+                    </div>
+                </div>
+
+
+                <h2>Furnishings</h2>
+                
+                <div class="layer-section">
+                    <h3>🛏️ Bedroom</h3>
+                    <div class="option-group" data-layer="bedroom">
+                        <label><input type="checkbox" name="bedroom" value="hideout"> Hideout House</label>
+                        <label><input type="checkbox" name="bedroom" value="soft-bed"> Soft Bedding</label>
+                        <label><input type="checkbox" name="bedroom" value="tunnel"> Tunnel System</label>
+                        <label><input type="checkbox" name="bedroom" value="hammock"> Mini Hammock</label>
+                    </div>
+                </div>
+
+                <div class="layer-section">
+                    <h3>🍽️ Eating Area</h3>
+                    <div class="option-group" data-layer="eating">
+                        <label><input type="checkbox" name="eating" value="food-bowl"> Food Bowl</label>
+                        <label><input type="checkbox" name="eating" value="water-bottle"> Water Bottle</label>
+                        <label><input type="checkbox" name="eating" value="treat-dispenser"> Treat Dispenser</label>
+                        <label><input type="checkbox" name="eating" value="hay-rack"> Hay Rack</label>
+                    </div>
+                </div>
+
+                <div class="layer-section">
+                    <h3>🌿 Outside Area</h3>
+                    <div class="option-group" data-layer="outside">
+                        <label><input type="checkbox" name="outside" value="litter-box"> Litter Box</label>
+                        <label><input type="checkbox" name="outside" value="exercise-wheel"> Exercise Wheel</label>
+                        <label><input type="checkbox" name="outside" value="climbing-structure"> Climbing Structure</label>
+                        <label><input type="checkbox" name="outside" value="digging-pit"> Digging Pit</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-panel">
+                <h2>Your Hamster House</h2>
+                <div class="house-preview">
+                    <!-- Animated Hamster Character -->
+                    <div class="hamster-character" id="hamster-character">
+                        <div class="hamster-body">
+                            <div class="hamster-head">
+                                <div class="hamster-ear left"></div>
+                                <div class="hamster-ear right"></div>
+                                <div class="hamster-eye left"></div>
+                                <div class="hamster-eye right"></div>
+                                <div class="hamster-nose"></div>
+                                <div class="hamster-cheeks left"></div>
+                                <div class="hamster-cheeks right"></div>
+                            </div>
+                            <div class="hamster-tail"></div>
+                            <div class="hamster-paws"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 3D House Structure -->
+                    <div class="house-container">
+                        <!-- Ground/Base -->
+                        <div class="layer base grass" id="base-layer"></div>
+                        
+                        <!-- Floor -->
+                        <div class="layer flooring wood" id="flooring-layer"></div>
+                        
+                        <!-- Exterior Walls -->
+                        <div class="layer exterior-walls log-cabin" id="exterior-walls-layer">
+                            <div class="wall-front"></div>
+                            <div class="wall-right"></div>
+                            <div class="wall-left"></div>
+                            <div class="wall-back"></div>
+                        </div>
+                        
+                        <!-- Interior Walls -->
+                        <div class="layer interior-walls natural-wood" id="interior-walls-layer">
+                            <div class="interior-wall-front"></div>
+                            <div class="interior-wall-left"></div>
+                            <div class="interior-wall-right"></div>
+                            <div class="interior-wall-back"></div>
+                        </div>
+                        
+                        
+                        <!-- Furnishings -->
+                        <div class="placement-grid" id="placement-grid"></div>
+                        <div class="furnishings" id="furnishings-layer"></div>
+                    </div>
+                </div>
+                <button class="save-design">💾 Save Design</button>
+                <button class="share-design">📤 Share</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
